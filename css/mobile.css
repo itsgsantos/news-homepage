@@ -54,6 +54,7 @@ p.description {
 .btn {
   margin-top: 20px;
   cursor: pointer;
+  color: var(--clr-neutral-very-dark-blue);
   background-color: var(--clr-primary-red);
   border: none;
   padding: 12px 24px;
