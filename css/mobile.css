@@ -1,0 +1,266 @@
+body {
+  background-color: var(--clr-neutral-offwhite);
+}
+
+main.container {
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 40px;
+}
+
+.hero-img {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.hero-img img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+h1.title {
+  margin-top: 20px;
+  font-size: 2.75rem;
+  font-weight: 800;
+  max-width: 12ch;
+  color: var(--clr-neutral-very-dark-blue);
+  line-height: 1;
+}
+
+p.description {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--clr-neutral-dark-grayish-blue);
+}
+
+.btn {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: var(--clr-primary-red);
+  border: none;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family: "Inter", sans-serif;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  color: var(--clr-neutral-offwhite);
+  background-color: var(--clr-neutral-very-dark-blue);
+}
+
+aside.news {
+  margin-top: 60px;
+  background-color: var(--clr-neutral-very-dark-blue);
+  color: var(--clr-neutral-offwhite);
+  padding: 20px;
+}
+
+aside.news h2 {
+  color: var(--clr-primary-orange);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+aside.news h3 a {
+  color: var(--clr-neutral-offwhite);
+  text-decoration: none;
+}
+
+aside.news h3 a:hover {
+  color: var(--clr-primary-orange);
+  transition: 0.3s;
+}
+
+aside.news hr {
+  border-color: var(--clr-neutral-dark-grayish-blue);
+  margin: 30px 0;
+}
+
+aside.news p {
+  color: var(--clr-neutral-grayish-blue);
+  font-weight: 200;
+  line-height: 1.75;
+  margin-top: 10px;
+  font-size: 0.875rem;
+}
+
+.top-blogs {
+  margin: 60px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+div.blog {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px 20px;
+}
+
+div.blog img {
+  grid-column: 1;
+  grid-row: span 2;
+}
+
+div.blog h4,
+div.blog p {
+  grid-template-columns: 2;
+}
+
+div.blog h4 {
+  align-self: flex-end;
+  font-weight: 900;
+  color: var(--clr-neutral-very-dark-blue);
+}
+
+div.blog h4 a {
+  color: var(--clr-neutral-very-dark-blue);
+  text-decoration: none;
+}
+
+div.blog h4 a:hover {
+  transition: 0.3s;
+  color: var(--clr-primary-red);
+}
+
+div.blog p {
+  align-self: flex-start;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--clr-neutral-dark-grayish-blue);
+}
+
+div.blog h4 span {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--clr-primary-red);
+}
+
+/*------------------------ MENU MOBILE INICIO ------------------------*/
+
+ul.tablet {
+  display: none;
+}
+
+.navbar {
+  height: 30px;
+}
+
+#logo {
+  height: 30px;
+  width: auto;
+  display: flex;
+}
+
+ul.menu-hamburguer {
+  position: absolute;
+  right: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+img.open {
+  cursor: pointer;
+}
+
+ul.menu {
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-left: 30px;
+  gap: 40px;
+  background-color: var(--clr-neutral-offwhite);
+  box-shadow: 0 0 0px 999px rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100dvh;
+  width: 75vw;
+}
+
+ul.menu.open {
+  display: flex;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+ul.menu.ativo.close {
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-100px, 0, 0);
+  }
+}
+
+ul.menu .close {
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 30px;
+}
+
+ul.menu li a {
+  font-size: 1.125rem;
+  color: var(--clr-neutral-very-dark-blue);
+  text-decoration: none;
+}
+
+ul.menu li a:hover {
+  transition: 0.3s;
+  color: var(--clr-primary-red);
+}
+
+/*------------------------ MENU MOBILE FIM ------------------------*/
+
+@media (min-width: 500px) {
+  h1.title {
+    line-height: 1.25;
+    max-width: initial;
+  }
+}

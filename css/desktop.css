@@ -1,0 +1,77 @@
+@media (min-width: 1000px) {
+  h1.title {
+    font-weight: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .navbar {
+    grid-column: 3 span;
+  }
+
+  .hero-img {
+    margin-top: 0;
+    grid-column: 2 span;
+    height: 100%;
+  }
+
+  .hero-img img {
+    height: 100%;
+  }
+
+  h1.title,
+  p.description {
+    margin-top: 0;
+  }
+
+  h1.title {
+    max-width: auto;
+    font-size: 3.5rem;
+    line-height: 1;
+    grid-column: 1;
+  }
+
+  p.description {
+    grid-column: 2;
+    font-size: 1rem;
+    grid-row: 3;
+  }
+
+  .btn {
+    width: 180px;
+    margin-top: 150px;
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  aside.news {
+    grid-column: 3;
+  }
+
+  aside.news h2 {
+    font-size: 2.5rem;
+  }
+
+  aside.news h3 {
+    font-size: 1.25rem;
+  }
+
+  aside.news p {
+    font-size: 1rem;
+  }
+
+  .top-blogs {
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .btn {
+    margin-top: auto;
+  }
+}
